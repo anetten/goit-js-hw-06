@@ -3,15 +3,14 @@ const ul = document.querySelector("ul");
 const items = document.querySelectorAll("li");
 // console.log(h2);
 // console.log(items);
-items.forEach((item) => {});
 
 const categoriesList = document.querySelectorAll("ul#categories li.item");
 console.log("Number of categories:", categoriesList.length);
 
 categoriesList.forEach(function (category) {
-  const categoryName = category.querySelector("h2");
-  const categoryItem = category.querySelectorAll("li");
+  const firstItem = category.firstElementChild.textContent;
+  const lastItem = category.lastElementChild.childElementCount;
 
-  console.log("Category:", categoryName.textContent);
-  console.log("Elements:", categoryItem.length);
+  console.log("Category:", firstItem);
+  console.log("Elements:", lastItem);
 });

@@ -8,6 +8,7 @@ loginForm.addEventListener("submit", function (event) {
 
   if (emailInput.value === "" || passwordInput.value === "") {
     alert("Будь ласка, заповніть всі поля форми");
+    return;
   }
 
   const formData = {
